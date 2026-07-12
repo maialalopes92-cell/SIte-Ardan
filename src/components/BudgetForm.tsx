@@ -44,6 +44,8 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
     "Reforma Residencial",
     "Reforma Comercial",
     "Instalações",
+    "Instalação de Ar-Condicionado",
+    "Manutenção Preventiva & Corretiva",
     "Acabamentos",
     "Gesso & Drywall",
     "Outro",

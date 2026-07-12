@@ -83,6 +83,36 @@ export const SERVICES: Service[] = [
     imageUrl: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80"
   },
   {
+    id: "ar-condicionado",
+    iconName: "Snowflake",
+    title: "Instalação de Ar-Condicionado",
+    shortDescription: "Instalação técnica de aparelhos split, infraestrutura frigorígena e acabamento limpo para residências e empresas.",
+    longDescription: "Executamos a instalação completa de sistemas de ar-condicionado com cuidado técnico em cada etapa: escolha do ponto ideal, passagem de tubulação frigorígena, dreno, alimentação elétrica e fixação das unidades. O serviço é planejado para preservar o acabamento do imóvel, garantir eficiência do equipamento e evitar problemas como vazamentos, mau escoamento ou perda de desempenho.",
+    features: [
+      "Instalação de aparelhos split, inverter e multi-split",
+      "Infraestrutura frigorígena com tubulação de cobre isolada",
+      "Execução de dreno, suportes e acabamento dos pontos",
+      "Ponto elétrico dedicado e conferência de carga",
+      "Teste de funcionamento, vedação e orientação de uso"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: "manutencao-preventiva-corretiva",
+    iconName: "Wrench",
+    title: "Manutenção Preventiva & Corretiva",
+    shortDescription: "Atendimentos técnicos para preservar instalações, corrigir falhas e evitar paradas inesperadas.",
+    longDescription: "Atuamos com manutenção preventiva e corretiva em imóveis residenciais, comerciais e corporativos, identificando riscos antes que se transformem em prejuízos. Realizamos inspeções, reparos, ajustes e substituições com foco em segurança, conservação do patrimônio e continuidade de uso dos ambientes.",
+    features: [
+      "Vistorias preventivas em elétrica, hidráulica e acabamentos",
+      "Correção de vazamentos, infiltrações e falhas pontuais",
+      "Reparos em tomadas, iluminação, quadros e pontos de consumo",
+      "Manutenção de portas, fechaduras, pisos, rejuntes e pintura",
+      "Atendimento programado para empresas, condomínios e residências"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+  },
+  {
     id: "acabamentos",
     iconName: "Sparkles",
     title: "Acabamentos & Revestimentos",

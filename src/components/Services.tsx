@@ -7,6 +7,8 @@ import {
   Zap,
   Sparkles,
   Layers,
+  Snowflake,
+  Wrench,
   ArrowRight,
   Check,
   X,
@@ -36,6 +38,10 @@ export default function Services({ onSelectServiceForBudget }: ServicesProps) {
         return <Sparkles className={className} />;
       case "Layers":
         return <Layers className={className} />;
+      case "Snowflake":
+        return <Snowflake className={className} />;
+      case "Wrench":
+        return <Wrench className={className} />;
       default:
         return <Hammer className={className} />;
     }
