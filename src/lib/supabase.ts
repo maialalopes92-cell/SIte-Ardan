@@ -23,10 +23,6 @@ type BudgetRequestInput = {
   files: File[];
 };
 
-type SupabaseBudgetRequestRow = {
-  id: string;
-};
-
 type SupabaseError = {
   message?: string;
   error_description?: string;
@@ -125,15 +121,18 @@ const uploadBudgetFiles = async (requestId: string, files: File[]) => {
 };
 
 export const createBudgetRequest = async (input: BudgetRequestInput) => {
+  const requestId = crypto.randomUUID();
+
   const response = await fetch(
-    `${supabaseUrl}/rest/v1/budget_requests?select=id`,
+    `${supabaseUrl}/rest/v1/budget_requests`,
     {
       method: "POST",
       headers: {
         ...getSupabaseHeaders(),
-        Prefer: "return=representation",
+        Prefer: "return=minimal",
       },
       body: JSON.stringify({
+        id: requestId,
         service_type: input.serviceType,
         estimated_area_m2: input.estimatedAreaM2,
         location: input.location || null,
@@ -150,14 +149,7 @@ export const createBudgetRequest = async (input: BudgetRequestInput) => {
     throw new Error(await parseSupabaseError(response));
   }
 
-  const [createdRequest] =
-    (await response.json()) as SupabaseBudgetRequestRow[];
+  await uploadBudgetFiles(requestId, input.files);
 
-  if (!createdRequest?.id) {
-    throw new Error("O Supabase não retornou o código da solicitação.");
-  }
-
-  await uploadBudgetFiles(createdRequest.id, input.files);
-
-  return createdRequest;
+  return { id: requestId };
 };
