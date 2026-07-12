@@ -106,8 +106,8 @@ export default function Hero({ onNavigate }: HeroProps) {
               className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
             >
               <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
-                alt="Obra Grupo Ardan"
+                src="/images/ardan-obra-estrutura.png"
+                alt="Equipe Grupo Ardan em obra estrutural"
                 className="w-full h-[320px] sm:h-[400px] object-cover hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent pointer-events-none" />

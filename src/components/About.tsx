@@ -42,7 +42,7 @@ export default function About() {
                   transition={{ duration: 0.5 }}
                 >
                   <img
-                    src="/images/hvac-split-installation.png"
+                    src="/images/ardan-split-instalacao.png"
                     alt="Profissional instalando ar-condicionado split"
                     className="rounded-xl object-cover h-48 w-full shadow-md"
                   />
@@ -54,7 +54,7 @@ export default function About() {
                   transition={{ duration: 0.5, delay: 0.1 }}
                 >
                   <img
-                    src="/images/electrical-panel-installation.png"
+                    src="/images/ardan-eletrica-quadro.png"
                     alt="Profissional executando instalação elétrica"
                     className="rounded-xl object-cover h-64 w-full shadow-md"
                   />
@@ -68,7 +68,7 @@ export default function About() {
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
                   <img
-                    src="/images/tile-installation.png"
+                    src="/images/ardan-assentamento-piso.png"
                     alt="Profissional assentando piso"
                     className="rounded-xl object-cover h-64 w-full shadow-md"
                   />

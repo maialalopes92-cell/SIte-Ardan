@@ -35,7 +35,7 @@ export const SERVICES: Service[] = [
       "Instalação de contra-marcos e vergas",
       "Execução de lajes residenciais"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=800&q=80"
+    imageUrl: "/images/ardan-obra-estrutura.png"
   },
   {
     id: "residencial",
@@ -80,7 +80,7 @@ export const SERVICES: Service[] = [
       "Instalação de aquecedores a gás e pressurizadores",
       "Pontos de iluminação em LED e automação residencial"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80"
+    imageUrl: "/images/ardan-eletrica-quadro.png"
   },
   {
     id: "ar-condicionado",
@@ -95,7 +95,7 @@ export const SERVICES: Service[] = [
       "Ponto elétrico dedicado e conferência de carga",
       "Teste de funcionamento, vedação e orientação de uso"
     ],
-    imageUrl: "/images/hvac-split-installation.png"
+    imageUrl: "/images/ardan-split-instalacao.png"
   },
   {
     id: "manutencao-preventiva-corretiva",
@@ -110,7 +110,7 @@ export const SERVICES: Service[] = [
       "Manutenção de portas, fechaduras, pisos, rejuntes e pintura",
       "Atendimento programado para empresas, condomínios e residências"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+    imageUrl: "/images/ardan-condensadora-manutencao.png"
   },
   {
     id: "acabamentos",
@@ -125,7 +125,7 @@ export const SERVICES: Service[] = [
       "Efeito cimento queimado e revestimentos especiais",
       "Cortes em meia-esquadria precisos de 45°"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=80"
+    imageUrl: "/images/ardan-assentamento-piso.png"
   },
   {
     id: "gesso",
