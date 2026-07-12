@@ -92,25 +92,30 @@ alter table public.budget_requests enable row level security;
 alter table public.budget_request_files enable row level security;
 alter table public.contact_messages enable row level security;
 
+grant usage on schema public to anon, authenticated;
+grant insert on public.budget_requests to anon, authenticated;
+grant insert on public.budget_request_files to anon, authenticated;
+grant insert on public.contact_messages to anon, authenticated;
+
 drop policy if exists "Anyone can create budget requests" on public.budget_requests;
 create policy "Anyone can create budget requests"
 on public.budget_requests
 for insert
-to public
+to anon, authenticated
 with check (true);
 
 drop policy if exists "Anyone can create budget request files" on public.budget_request_files;
 create policy "Anyone can create budget request files"
 on public.budget_request_files
 for insert
-to public
+to anon, authenticated
 with check (true);
 
 drop policy if exists "Anyone can create contact messages" on public.contact_messages;
 create policy "Anyone can create contact messages"
 on public.contact_messages
 for insert
-to public
+to anon, authenticated
 with check (true);
 
 insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
@@ -131,5 +136,5 @@ drop policy if exists "Anyone can upload budget attachments" on storage.objects;
 create policy "Anyone can upload budget attachments"
 on storage.objects
 for insert
-to public
+to anon, authenticated
 with check (bucket_id = 'budget-attachments');

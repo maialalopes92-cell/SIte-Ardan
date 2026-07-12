@@ -380,7 +380,7 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
 
                   {submitError && (
                     <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
-                      Não conseguimos salvar sua solicitação agora. Confira se as tabelas do Supabase já foram criadas e tente novamente.
+                      Não conseguimos salvar sua solicitação agora. Confira as permissões de envio no Supabase e tente novamente.
                       <span className="block pt-1 text-xs text-red-500">{submitError}</span>
                     </div>
                   )}
