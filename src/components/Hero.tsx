@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { ArrowUpRight, CheckCircle2, ShieldCheck, Trophy } from "lucide-react";
 import { COMPANY_INFO } from "../data";
@@ -6,7 +7,44 @@ interface HeroProps {
   onNavigate: (sectionId: string) => void;
 }
 
+const HERO_IMAGES = [
+  {
+    src: "/images/ardan-obra-estrutura.png",
+    alt: "Equipe Grupo Ardan em obra estrutural",
+  },
+  {
+    src: "/images/ardan-eletrica-quadro.png",
+    alt: "Profissional Grupo Ardan executando instalação elétrica",
+  },
+  {
+    src: "/images/ardan-split-instalacao.png",
+    alt: "Profissional Grupo Ardan instalando ar-condicionado split",
+  },
+  {
+    src: "/images/ardan-condensadora-manutencao.png",
+    alt: "Profissional Grupo Ardan fazendo manutenção em condensadora",
+  },
+  {
+    src: "/images/ardan-assentamento-piso.png",
+    alt: "Profissional Grupo Ardan assentando piso",
+  },
+  {
+    src: "/images/ardan-drywall-instalacao.png",
+    alt: "Profissional Grupo Ardan instalando drywall",
+  },
+];
+
 export default function Hero({ onNavigate }: HeroProps) {
+  const [activeImage, setActiveImage] = useState(0);
+
+  useEffect(() => {
+    const imageTimer = window.setInterval(() => {
+      setActiveImage((current) => (current + 1) % HERO_IMAGES.length);
+    }, 4200);
+
+    return () => window.clearInterval(imageTimer);
+  }, []);
+
   return (
     <section
       id="inicio"
@@ -105,12 +143,37 @@ export default function Hero({ onNavigate }: HeroProps) {
               transition={{ duration: 0.6 }}
               className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
             >
-              <img
-                src="/images/ardan-obra-estrutura.png"
-                alt="Equipe Grupo Ardan em obra estrutural"
-                className="w-full h-[320px] sm:h-[400px] object-cover hover:scale-105 transition-transform duration-700"
-              />
+              <div className="relative h-[320px] sm:h-[400px]">
+                {HERO_IMAGES.map((image, index) => (
+                  <img
+                    key={image.src}
+                    src={image.src}
+                    alt={image.alt}
+                    className={`absolute inset-0 h-full w-full object-cover transition-all duration-1000 ${
+                      index === activeImage
+                        ? "opacity-100 scale-100"
+                        : "opacity-0 scale-105"
+                    }`}
+                  />
+                ))}
+              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent pointer-events-none" />
+
+              <div className="absolute top-4 right-4 flex gap-1.5">
+                {HERO_IMAGES.map((image, index) => (
+                  <button
+                    key={image.src}
+                    type="button"
+                    aria-label={`Mostrar imagem ${index + 1}`}
+                    onClick={() => setActiveImage(index)}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      index === activeImage
+                        ? "w-6 bg-white"
+                        : "w-2 bg-white/60 hover:bg-white"
+                    }`}
+                  />
+                ))}
+              </div>
 
               {/* Float Quality Badge */}
               <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-100 flex items-center space-x-3">
