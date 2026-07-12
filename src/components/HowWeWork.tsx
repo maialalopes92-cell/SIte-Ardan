@@ -162,7 +162,7 @@ export default function HowWeWork() {
                 <div className="pt-4 border-t border-slate-200/60 flex flex-col sm:flex-row items-center justify-between gap-4">
                   <div className="flex items-center space-x-2 text-slate-500 text-xs font-sans">
                     <ShieldAlert className="w-4 h-4 text-emerald-500" />
-                    <span>Garantia de conformidade técnica ABNT</span>
+                    <span>Execução organizada, limpa e acompanhada</span>
                   </div>
                   
                   {activeStep < PROCESS_STEPS.length - 1 ? (

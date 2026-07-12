@@ -436,7 +436,7 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
                       Pedido Recebido com Sucesso!
                     </h3>
                     <p className="text-sm text-slate-600 font-sans max-w-md mx-auto">
-                      Obrigado pelo contato, <strong>{name}</strong>! Seus detalhes de orçamento para <strong>{serviceType}</strong> foram enviados à nossa central de engenharia.
+                      Obrigado pelo contato, <strong>{name}</strong>! Seus detalhes de orçamento para <strong>{serviceType}</strong> foram enviados à nossa equipe de atendimento.
                     </p>
                   </div>
                   <div className="p-4 bg-white/80 rounded-2xl border border-emerald-100 max-w-sm mx-auto text-left space-y-2 text-xs text-slate-500 font-sans">

@@ -131,14 +131,14 @@ export default function Services({ onSelectServiceForBudget }: ServicesProps) {
               Procurando um serviço sob medida que não encontrou aqui?
             </h3>
             <p className="text-sm sm:text-base text-slate-300 font-sans leading-relaxed">
-              Trabalhamos com soluções totalmente customizadas para projetos arquitetônicos específicos, instalações prediais complexas ou assessoria para laudos de reforma. Nossa engenharia está pronta para lhe atender.
+              Trabalhamos com mão de obra especializada para demandas específicas de construção, reforma, instalações e acabamentos. Conte com uma equipe prática, organizada e pronta para executar o serviço com qualidade.
             </p>
             <button
               id="services-custom-cta-btn"
               onClick={() => handleRequestQuote("Outro Serviço Customizado")}
               className="inline-flex items-center space-x-2 bg-brand-primary hover:bg-brand-secondary text-white font-bold px-6 py-3 rounded-xl transition-colors shadow-lg"
             >
-              <span>Consultar Nosso Engenheiro</span>
+              <span>Solicitar Orçamento Personalizado</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

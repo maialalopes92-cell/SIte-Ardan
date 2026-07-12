@@ -72,7 +72,7 @@ export const SERVICES: Service[] = [
     iconName: "Zap",
     title: "Instalações Hidráulicas & Elétricas",
     shortDescription: "Sistemas elétricos e hidráulicos seguros, modernos e dimensionados corretamente.",
-    longDescription: "A engenharia invisível da obra. Executamos quadros elétricos modernos, passagens de fiação, tubulações de água fria/quente, esgotos, e infraestrutura de ar-condicionado. Garantimos que sua obra não tenha problemas crônicos como vazamentos ou sobrecarga elétrica.",
+    longDescription: "A parte técnica que precisa funcionar todos os dias. Executamos quadros elétricos modernos, passagens de fiação, tubulações de água fria/quente, esgotos, e infraestrutura de ar-condicionado. Trabalhamos para evitar problemas crônicos como vazamentos ou sobrecarga elétrica.",
     features: [
       "Refação de prumadas e tubulações de cobre/PPR/PEX",
       "Montagem de quadros de disjuntores atualizados",
@@ -155,7 +155,7 @@ export const PROJECTS: Project[] = [
     duration: "75 dias",
     location: "Vila Mariana, São Paulo - SP",
     details: [
-      "Derrubada de paredes estruturais com laudo de RRT",
+      "Demolições e adequações conforme liberação do cliente/condomínio",
       "Porcelanato de 1,20m x 1,20m assentado em conceito integrado",
       "Instalação de iluminação em trilhos eletrificados e rasgos de luz",
       "Refação de 3 banheiros completos com nichos esculpidos em mármore"
@@ -293,10 +293,6 @@ export const FAQS = [
   {
     question: "Quais regiões de São Paulo o Grupo Ardan atende?",
     answer: "Atendemos toda a Capital de São Paulo (Zona Sul, Zona Oeste, Zona Leste, Zona Norte e Centro), a região do Grande ABC (Santo André, São Bernardo do Campo, São Caetano do Sul e Diadema) e cidades vizinhas da Região Metropolitana (como Barueri/Alphaville, Guarulhos e Osasco)."
-  },
-  {
-    question: "Vocês emitem RRT/ART e documentação para condomínio?",
-    answer: "Sim! Para todas as obras em apartamentos ou que necessitam de intervenções estruturais importantes, fornecemos ou encaminhamos os engenheiros parceiros para a emissão da ART (Anotação de Responsabilidade Técnica) ou RRT (Registro de Responsabilidade Técnica) e o Plano de Reforma exigido pela norma ABNT NBR 16.280."
   },
   {
     question: "Qual é a garantia oferecida para os serviços prestados?",
