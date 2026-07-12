@@ -8,6 +8,7 @@ import Portfolio from "./components/Portfolio";
 import BudgetForm from "./components/BudgetForm";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("inicio");
@@ -88,6 +89,8 @@ export default function App() {
 
       {/* Dynamic Footer */}
       <Footer onNavigate={handleNavigate} />
+
+      <FloatingWhatsApp />
     </div>
   );
 }

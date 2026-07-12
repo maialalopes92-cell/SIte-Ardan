@@ -110,7 +110,7 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
   };
 
   const generateWhatsAppMessage = () => {
-    return `https://wa.me/5511992428878?text=${encodeURIComponent(generateWhatsAppText())}`;
+    return `https://wa.me/${COMPANY_INFO.phoneRaw.replace(/\D/g, "")}?text=${encodeURIComponent(generateWhatsAppText())}`;
   };
 
   const handleSubmit = async (e: FormEvent) => {
