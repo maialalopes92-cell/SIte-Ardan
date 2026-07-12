@@ -14,8 +14,8 @@ export const COMPANY_INFO = {
   instagram: "https://instagram.com/grupoardan",
   facebook: "https://facebook.com/grupoardan",
   stats: [
-    { value: "10+", label: "Anos de Experiência" },
-    { value: "250+", label: "Obras Entregues" },
+    { value: "5+", label: "Anos de Experiência" },
+    { value: "150+", label: "Obras Concluídas" },
     { value: "100%", label: "Prazos Cumpridos" },
     { value: "15+", label: "Especialistas na Equipe" }
   ]
