@@ -1,4 +1,4 @@
-import { useState, useRef, ChangeEvent, DragEvent, FormEvent } from "react";
+import { useState, useEffect, useRef, ChangeEvent, DragEvent, FormEvent } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import {
   FileUp,
@@ -33,17 +33,11 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Prefill service type if prop updates
-  useState(() => {
+  useEffect(() => {
     if (prefilledService) {
       setServiceType(prefilledService);
     }
-  });
-
-  // Watch for external prefill changes
-  if (prefilledService && prefilledService !== serviceType && !prefilledService.startsWith("Projeto similar")) {
-    setServiceType(prefilledService);
-  }
+  }, [prefilledService]);
 
   const serviceOptions = [
     "Alvenaria",
