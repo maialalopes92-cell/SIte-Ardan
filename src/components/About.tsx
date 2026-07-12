@@ -54,8 +54,8 @@ export default function About() {
                   transition={{ duration: 0.5, delay: 0.1 }}
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=400&q=80"
-                    alt="Medição e Planejamento"
+                    src="/images/electrical-panel-installation.png"
+                    alt="Profissional executando instalação elétrica"
                     className="rounded-xl object-cover h-64 w-full shadow-md"
                   />
                 </motion.div>
@@ -68,8 +68,8 @@ export default function About() {
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=400&q=80"
-                    alt="Acabamentos de Obra"
+                    src="/images/tile-installation.png"
+                    alt="Profissional assentando piso"
                     className="rounded-xl object-cover h-64 w-full shadow-md"
                   />
                 </motion.div>
