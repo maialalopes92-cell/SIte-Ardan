@@ -42,7 +42,7 @@ export default function About() {
                   transition={{ duration: 0.5 }}
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=400&q=80"
+                    src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=400&q=80"
                     alt="Profissional Grupo Ardan"
                     className="rounded-xl object-cover h-48 w-full shadow-md"
                   />
