@@ -95,7 +95,7 @@ export const SERVICES: Service[] = [
       "Ponto elétrico dedicado e conferência de carga",
       "Teste de funcionamento, vedação e orientação de uso"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80"
+    imageUrl: "/images/hvac-split-installation.png"
   },
   {
     id: "manutencao-preventiva-corretiva",
