@@ -1,8 +1,13 @@
 const env = import.meta.env as Record<string, string | undefined>;
 
-const supabaseUrl = env.VITE_SUPABASE_URL?.replace(/\/$/, "");
+const fallbackSupabaseUrl = "https://rxlhfupyltngdjsfjfwu.supabase.co";
+const fallbackSupabaseKey = "sb_publishable_48ekUG9Oq6sO-qj2d6HMyw_fXA12Oe6";
+
+const supabaseUrl = (env.VITE_SUPABASE_URL || fallbackSupabaseUrl).replace(/\/$/, "");
 const supabaseKey =
-  env.VITE_SUPABASE_PUBLISHABLE_KEY || env.VITE_SUPABASE_ANON_KEY;
+  env.VITE_SUPABASE_PUBLISHABLE_KEY ||
+  env.VITE_SUPABASE_ANON_KEY ||
+  fallbackSupabaseKey;
 
 const budgetAttachmentsBucket = "budget-attachments";
 
