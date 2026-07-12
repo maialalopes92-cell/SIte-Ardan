@@ -1,0 +1,6 @@
+{
+  "name": "Grupo Ardan",
+  "description": "Site Institucional do Grupo Ardan - Soluções completas de construção, reforma, instalações e acabamento residenciais e comerciais.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
