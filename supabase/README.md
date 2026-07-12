@@ -27,8 +27,12 @@ No Supabase Dashboard:
 
 1. Abra o projeto no Supabase.
 2. Vá em `SQL Editor`.
-3. Cole o conteúdo de `supabase/migrations/20260711211500_create_leads_and_budget_tables.sql`.
+3. Para criar tudo do zero, cole o conteúdo de `supabase/migrations/20260711211500_create_leads_and_budget_tables.sql`.
 4. Execute o SQL.
+
+Se as tabelas já existem, mas o site mostra erro de RLS, execute apenas:
+
+`supabase/migrations/20260712120000_fix_public_insert_policies.sql`
 
 Pela CLI do Supabase:
 
