@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { COMPANY_INFO } from "../data";
 import { createBudgetRequest } from "../lib/supabase";
+import { sendBudgetEmail } from "../lib/email";
 
 interface BudgetFormProps {
   prefilledService: string;
@@ -120,7 +121,7 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
     setSubmitError("");
 
     try {
-      await createBudgetRequest({
+      const budgetRequest = await createBudgetRequest({
         serviceType,
         estimatedAreaM2: area,
         location,
@@ -131,6 +132,24 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
         whatsappMessage: generateWhatsAppText(),
         files: uploadedFiles,
       });
+
+      try {
+        await sendBudgetEmail({
+          requestId: budgetRequest.id,
+          serviceType,
+          estimatedAreaM2: area,
+          location,
+          clientName: name,
+          clientEmail: email,
+          clientPhone: phone,
+          description,
+          whatsappMessage: generateWhatsAppText(),
+          fileCount: uploadedFiles.length,
+        });
+      } catch (emailError) {
+        console.warn("Solicitação salva, mas o email não foi enviado.", emailError);
+      }
+
       setIsSubmitting(false);
       setIsSubmitted(true);
     } catch (error) {
