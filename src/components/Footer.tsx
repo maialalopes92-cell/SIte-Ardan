@@ -170,7 +170,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           <div>
             <span>© {currentYear} {COMPANY_INFO.name}. Todos os direitos reservados. </span>
             <span className="block sm:inline mt-1 sm:mt-0 text-slate-600 font-mono">
-              CNPJ: 45.288.978/0001-80 (Demonstrativo)
+              CNPJ: 44.863.123/0001-21
             </span>
           </div>
 
