@@ -10,7 +10,7 @@ interface HeroProps {
 const HERO_IMAGES = [
   {
     src: "/images/ardan-obra-estrutura.png",
-    alt: "Equipe Grupo Ardan em obra estrutural",
+    alt: "Equipe Grupo Ardan executando etapa de construção",
   },
   {
     src: "/images/ardan-eletrica-quadro.png",

@@ -78,7 +78,7 @@ export default function Contact() {
             Fale Conosco
           </h2>
           <p className="text-slate-600 font-sans">
-            Estamos prontos para atender você. Tire suas dúvidas, solicite visitas presenciais ou nos envie o projeto de seu arquiteto para cotação.
+            Estamos prontos para atender você. Tire suas dúvidas, solicite uma visita presencial ou envie fotos e medidas do local para cotação.
           </p>
         </div>
 

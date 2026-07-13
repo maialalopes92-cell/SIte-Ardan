@@ -529,14 +529,14 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
                     <Info className="w-4 h-4 text-brand-primary flex-shrink-0 mt-0.5" />
                     <div>
                       <span className="block font-bold text-slate-300">Visita técnica inclusa:</span>
-                      <span className="block">Ao enviar o formulário, agendaremos uma vistoria gratuita para conferir a metragem real e precificar o material com precisão.</span>
+                      <span className="block">Ao enviar o formulário, combinaremos uma visita gratuita para conferir o local, entender o serviço e orientar o próximo passo.</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="text-center">
                   <span className="text-[10px] font-mono text-slate-500 uppercase tracking-wider">
-                    Grupo Ardan • Engenharia de Qualidade
+                    Grupo Ardan • Mão de Obra Especializada
                   </span>
                 </div>
               </div>

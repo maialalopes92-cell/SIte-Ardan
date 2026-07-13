@@ -25,12 +25,12 @@ export const SERVICES: Service[] = [
   {
     id: "alvenaria",
     iconName: "Hammer",
-    title: "Alvenaria & Alvenaria Estrutural",
-    shortDescription: "Construção de paredes, muros, rebocos, estruturas e fundações com rigor técnico.",
-    longDescription: "Realizamos toda a parte estrutural bruta da obra, garantindo solidez e segurança. Do alicerce ao levantamento de paredes, lajes, vigas, e rebocos internos e externos, aplicando sempre as melhores técnicas construtivas de alinhamento, prumo e esquadro.",
+    title: "Alvenaria & Construção",
+    shortDescription: "Construção de paredes, muros, rebocos, bases e etapas iniciais da obra com execução cuidadosa.",
+    longDescription: "Realizamos a parte bruta da obra com mão de obra especializada. Do preparo da base ao levantamento de paredes, lajes residenciais e rebocos internos e externos, aplicamos boas práticas de alinhamento, prumo, esquadro e acabamento.",
     features: [
-      "Fundações e vigas de baldrame",
-      "Levantamento de paredes e alvenaria estrutural",
+      "Bases, fundações leves e vigas de baldrame",
+      "Levantamento de paredes e muros",
       "Reboco e emboço técnico de alta aderência",
       "Instalação de contra-marcos e vergas",
       "Execução de lajes residenciais"
@@ -248,7 +248,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     number: 1,
     title: "Visita Técnica & Alinhamento",
     subtitle: "Primeiro contato",
-    description: "Agendamos uma visita técnica gratuita no local da obra para entender suas necessidades, avaliar as condições estruturais, tirar medidas precisas e discutir suas ideias de design ou projeto.",
+    description: "Agendamos uma visita técnica gratuita no local da obra para entender suas necessidades, conferir as medidas, avaliar o serviço desejado e alinhar a melhor forma de execução.",
     iconName: "Eye"
   },
   {
@@ -269,14 +269,14 @@ export const PROCESS_STEPS: ProcessStep[] = [
     number: 4,
     title: "Execução, Gestão & Organização",
     subtitle: "Cuidado em cada detalhe",
-    description: "Nossos profissionais qualificados executam a obra sob constante supervisão. Enviamos relatórios semanais por WhatsApp com fotos e vídeos das evoluções, mantendo a limpeza diária e o respeito às normas de condomínio.",
+    description: "Nossos profissionais qualificados executam a obra com acompanhamento próximo. Enviamos atualizações por WhatsApp com fotos e vídeos das evoluções, mantendo a limpeza diária e o respeito às normas de condomínio.",
     iconName: "Hammer"
   },
   {
     number: 5,
     title: "Entrega Limpa & Garantia",
     subtitle: "Pronto para morar ou usar",
-    description: "Realizamos uma vistoria rigorosa de qualidade em acabamentos, tomadas e hidráulica. Entregamos a obra perfeitamente limpa (faxina pós-obra de verdade) e fornecemos a garantia legal dos serviços executados.",
+    description: "Fazemos uma conferência final dos acabamentos, tomadas e hidráulica executados. Entregamos a obra limpa e organizada, com garantia dos serviços realizados pela equipe.",
     iconName: "CheckCircle"
   }
 ];
@@ -296,6 +296,6 @@ export const FAQS = [
   },
   {
     question: "Qual é a garantia oferecida para os serviços prestados?",
-    answer: "Oferecemos garantia de até 5 anos para problemas estruturais e de impermeabilização executados por nós, e garantia de 1 ano para instalações elétricas, hidráulicas e acabamentos finos, contados a partir da data de entrega oficial e vistoria da obra."
+    answer: "Oferecemos garantia sobre os serviços executados conforme o tipo de trabalho contratado, incluindo instalações, hidráulica, acabamentos e impermeabilização realizada por nossa equipe. Tudo é alinhado em orçamento antes do início."
   }
 ];
