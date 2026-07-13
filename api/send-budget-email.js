@@ -13,6 +13,22 @@ const formatDate = () =>
     timeZone: "America/Sao_Paulo",
   }).format(new Date());
 
+const formatAttachmentSummary = (lead) => {
+  const fileCount = Number(lead.fileCount || 0);
+  const attachedCount = Array.isArray(lead.attachments) ? lead.attachments.length : 0;
+  const skippedCount = Array.isArray(lead.skippedFiles) ? lead.skippedFiles.length : 0;
+
+  if (!fileCount) {
+    return "Nenhum anexo";
+  }
+
+  if (!skippedCount) {
+    return `${fileCount} arquivo(s) enviado(s), ${attachedCount} anexado(s) neste email`;
+  }
+
+  return `${fileCount} arquivo(s) enviado(s): ${attachedCount} anexado(s) neste email e ${skippedCount} salvo(s) no Supabase`;
+};
+
 const buildEmailHtml = (lead) => {
   const rows = [
     ["Protocolo", lead.requestId],
@@ -22,7 +38,7 @@ const buildEmailHtml = (lead) => {
     ["Nome", lead.clientName],
     ["Telefone/WhatsApp", lead.clientPhone],
     ["Email", lead.clientEmail],
-    ["Anexos", lead.fileCount ? `${lead.fileCount} arquivo(s) enviado(s)` : "Nenhum anexo"],
+    ["Anexos", formatAttachmentSummary(lead)],
     ["Data de envio", formatDate()],
   ];
 
@@ -72,8 +88,9 @@ Local: ${lead.location || "Não informado"}
 Nome: ${lead.clientName || "Não informado"}
 Telefone/WhatsApp: ${lead.clientPhone || "Não informado"}
 Email: ${lead.clientEmail || "Não informado"}
-Anexos: ${lead.fileCount ? `${lead.fileCount} arquivo(s) enviado(s)` : "Nenhum anexo"}
+Anexos: ${formatAttachmentSummary(lead)}
 Data de envio: ${formatDate()}
+${lead.skippedFiles?.length ? `Arquivos salvos no Supabase: ${lead.skippedFiles.join(", ")}\n` : ""}
 
 Descrição:
 ${lead.description || "Não informado"}
@@ -98,6 +115,15 @@ export default async function handler(request, response) {
 
   try {
     const lead = request.body || {};
+    const attachments = Array.isArray(lead.attachments)
+      ? lead.attachments
+          .filter((attachment) => attachment?.filename && attachment?.content)
+          .map((attachment) => ({
+            filename: attachment.filename,
+            content: attachment.content,
+            content_type: attachment.contentType || "application/octet-stream",
+          }))
+      : [];
 
     if (!lead.clientName || !lead.clientPhone) {
       return response.status(400).json({ error: "Nome e telefone são obrigatórios." });
@@ -116,6 +142,7 @@ export default async function handler(request, response) {
         subject: `Novo orçamento Grupo Ardan - ${lead.clientName}`,
         html: buildEmailHtml(lead),
         text: buildEmailText(lead),
+        attachments: attachments.length ? attachments : undefined,
       }),
     });
 

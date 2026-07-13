@@ -144,7 +144,7 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
           clientPhone: phone,
           description,
           whatsappMessage: generateWhatsAppText(),
-          fileCount: uploadedFiles.length,
+          files: uploadedFiles,
         });
       } catch (emailError) {
         console.warn("Solicitação salva, mas o email não foi enviado.", emailError);
