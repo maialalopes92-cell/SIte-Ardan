@@ -11,7 +11,7 @@ export const COMPANY_INFO = {
   email: "contato@grupoardan.com.br",
   address: "São Paulo, Grande ABC e Região Metropolitana",
   workingHours: "Segunda a Sexta, das 08h às 18h; Sábado, das 08h às 13h",
-  instagram: "https://instagram.com/grupoardan",
+  instagram: "https://www.instagram.com/grupoardan_/",
   facebook: "https://facebook.com/grupoardan",
   stats: [
     { value: "5+", label: "Anos de Experiência" },
