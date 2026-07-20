@@ -1,4 +1,4 @@
-import { Service, Project, ProcessStep, Testimonial } from "./types";
+import { Service, Project, ProcessStep } from "./types";
 
 export const COMPANY_INFO = {
   name: "Grupo Ardan",
@@ -146,99 +146,99 @@ export const SERVICES: Service[] = [
 
 export const PROJECTS: Project[] = [
   {
-    id: "proj-1",
-    title: "Apartamento Premium Vila Mariana",
-    category: "Residencial",
-    description: "Reforma total de apartamento de 120m², integrando a sala com a varanda gourmet, refazendo todas as instalações de iluminação e revestimentos.",
-    imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
-    area: "120 m²",
-    duration: "75 dias",
-    location: "Vila Mariana, São Paulo - SP",
+    id: "frente-alvenaria",
+    title: "Alvenaria e Estrutura",
+    category: "Alvenaria",
+    description: "Execução de paredes, bases, rebocos, muros e etapas iniciais da obra conforme avaliação do local e necessidade do cliente.",
+    imageUrl: "/images/ardan-obra-estrutura.png",
+    area: "Sob avaliação",
+    duration: "Conforme escopo",
+    location: "São Paulo, Grande ABC e Região Metropolitana",
     details: [
-      "Demolições e adequações conforme liberação do cliente/condomínio",
-      "Porcelanato de 1,20m x 1,20m assentado em conceito integrado",
-      "Instalação de iluminação em trilhos eletrificados e rasgos de luz",
-      "Refação de 3 banheiros completos com nichos esculpidos em mármore"
+      "Levantamento e regularização de paredes, muros e bases",
+      "Preparo do ambiente para as próximas etapas da obra",
+      "Execução com atenção a prumo, esquadro e alinhamento",
+      "Organização do local e comunicação durante o serviço"
     ]
   },
   {
-    id: "proj-2",
-    title: "Escritório Corporativo Paulista",
-    category: "Comercial",
-    description: "Adequação completa de conjunto comercial de 240m² na Avenida Paulista para receber uma renomada banca de advocacia, com foco em isolamento acústico.",
-    imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
-    area: "240 m²",
-    duration: "45 dias",
-    location: "Bela Vista, São Paulo - SP",
+    id: "frente-instalacoes",
+    title: "Instalações Elétricas e Hidráulicas",
+    category: "Instalações",
+    description: "Mão de obra para novos pontos, correções, adequações e infraestrutura elétrica ou hidráulica em reformas residenciais e comerciais.",
+    imageUrl: "/images/ardan-eletrica-quadro.png",
+    area: "Por ponto/ambiente",
+    duration: "Conforme escopo",
+    location: "Atendimento sob orçamento",
     details: [
-      "Divisórias em Drywall com isolamento em lã de rocha de alta densidade",
-      "Piso vinílico acústico e rodapés de alta durabilidade",
-      "Rede lógica e elétrica de alta capacidade com cabeamento estruturado Cat6",
-      "Obra entregue em cronograma acelerado operando em horários alternativos"
+      "Instalação e adequação de pontos elétricos e hidráulicos",
+      "Passagem de tubulações, fiação e infraestrutura",
+      "Correções pontuais em vazamentos, tomadas e iluminação",
+      "Execução organizada para reduzir retrabalho na reforma"
     ]
   },
   {
-    id: "proj-3",
-    title: "Sobrado Moderno Alphaville",
-    category: "Construção",
-    description: "Construção de residência unifamiliar moderna de alto padrão, desde as fundações de concreto armado até a entrega das chaves e paisagismo.",
-    imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-    area: "350 m²",
-    duration: "10 meses",
-    location: "Barueri, Grande SP",
-    details: [
-      "Estrutura completa em concreto armado e lajes protendidas",
-      "Esquadrias de alumínio sob medida com persianas integradas",
-      "Revestimento de fachada com porcelanato amadeirado e pedras naturais",
-      "Piscina em concreto armado revestida com pastilhas de porcelana"
-    ]
-  },
-  {
-    id: "proj-4",
-    title: "Clínica de Estética nos Jardins",
-    category: "Comercial",
-    description: "Reforma de casarão comercial com adequação de salas para procedimentos estéticos, respeitando todas as exigências sanitárias e regulatórias da ANVISA.",
-    imageUrl: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
-    area: "180 m²",
-    duration: "60 dias",
-    location: "Jardins, São Paulo - SP",
-    details: [
-      "Adequação de encanamento de água e esgoto em todas as salas",
-      "Aplicação de tintas epóxi super laváveis e pisos vinílicos homogêneos",
-      "Rebaixamento total em gesso acartonado aramado com iluminação difusa",
-      "Infraestrutura dedicada de exaustão e ar-condicionado individual"
-    ]
-  },
-  {
-    id: "proj-5",
-    title: "Cobertura Duplex em Moema",
+    id: "frente-acabamentos",
+    title: "Acabamentos e Revestimentos",
     category: "Acabamentos",
-    description: "Atualização de acabamentos e área externa em cobertura duplex, incluindo instalação de deck de madeira de lei, spa e revestimentos cimentícios.",
-    imageUrl: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80",
-    area: "210 m²",
-    duration: "50 dias",
-    location: "Moema, São Paulo - SP",
+    description: "Assentamento de pisos, porcelanatos, revestimentos e pintura com cuidado no nivelamento, paginação e acabamento visual.",
+    imageUrl: "/images/ardan-assentamento-piso.png",
+    area: "Sob medição",
+    duration: "Conforme escopo",
+    location: "Atendimento sob orçamento",
     details: [
-      "Instalação de SPA com hidromassagem e deck elevado em madeira Cumaru",
-      "Pintura texturizada em cimento queimado na área de lazer",
-      "Assentamento de revestimentos de pedra vulcânica (Hijau) na piscina",
-      "Refação de impermeabilização integral da laje externa"
+      "Assentamento de pisos e revestimentos em áreas internas e externas",
+      "Preparo, nivelamento e conferência da base antes da aplicação",
+      "Cortes, arremates, rejuntes e finalizações com capricho",
+      "Proteção das áreas de circulação durante o serviço"
     ]
   },
   {
-    id: "proj-6",
-    title: "Apartamento Compacto Pinheiros",
-    category: "Residencial",
-    description: "Reforma planejada de estúdio residencial de 45m², otimizando espaços com divisória móvel em serralheria, marcenaria planejada e iluminação focal.",
-    imageUrl: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80",
-    area: "45 m²",
-    duration: "30 dias",
-    location: "Pinheiros, São Paulo - SP",
+    id: "frente-gesso-drywall",
+    title: "Gesso e Drywall",
+    category: "Drywall",
+    description: "Execução de forros, sancas, divisórias e acabamentos em drywall para organizar ambientes e preparar a pintura final.",
+    imageUrl: "/images/ardan-drywall-instalacao.png",
+    area: "Sob medição",
+    duration: "Conforme escopo",
+    location: "Atendimento sob orçamento",
     details: [
-      "Integração total do estúdio através do nivelamento do piso da sacada",
-      "Pintura geral e instalação de forro de drywall plano",
-      "Montagem de estrutura metálica sob medida para painéis divisórios",
-      "Planejamento rápido executado perfeitamente em curto prazo"
+      "Forros, sancas, rasgos de luz e cortineiros",
+      "Divisórias e fechamentos em drywall",
+      "Tratamento de juntas e preparo para pintura",
+      "Execução limpa e alinhada ao acabamento do ambiente"
+    ]
+  },
+  {
+    id: "frente-ar-condicionado",
+    title: "Instalação de Ar-Condicionado",
+    category: "Ar-condicionado",
+    description: "Instalação de aparelhos split, infraestrutura frigorígena, dreno, suporte e acabamento para residências e empresas.",
+    imageUrl: "/images/ardan-split-instalacao.png",
+    area: "Por equipamento",
+    duration: "Conforme instalação",
+    location: "Atendimento sob orçamento",
+    details: [
+      "Instalação de evaporadora e condensadora",
+      "Tubulação frigorígena, dreno e suporte",
+      "Ponto elétrico e acabamento conforme necessidade do local",
+      "Teste de funcionamento e orientação de uso"
+    ]
+  },
+  {
+    id: "frente-manutencao",
+    title: "Manutenção Preventiva e Corretiva",
+    category: "Manutenção",
+    description: "Atendimentos para corrigir falhas, preservar instalações e reduzir paradas inesperadas em ambientes residenciais e comerciais.",
+    imageUrl: "/images/ardan-condensadora-manutencao.png",
+    area: "Por chamado",
+    duration: "Conforme diagnóstico",
+    location: "Atendimento sob orçamento",
+    details: [
+      "Manutenção em ar-condicionado, elétrica, hidráulica e acabamentos",
+      "Correção de falhas pontuais e ajustes programados",
+      "Atendimento para residências, empresas e condomínios",
+      "Registro do serviço executado conforme combinado"
     ]
   }
 ];
@@ -292,7 +292,7 @@ export const FAQS = [
   },
   {
     question: "Quais regiões de São Paulo o Grupo Ardan atende?",
-    answer: "Atendemos toda a Capital de São Paulo (Zona Sul, Zona Oeste, Zona Leste, Zona Norte e Centro), a região do Grande ABC (Santo André, São Bernardo do Campo, São Caetano do Sul e Diadema) e cidades vizinhas da Região Metropolitana (como Barueri/Alphaville, Guarulhos e Osasco)."
+    answer: "Atendemos a Capital de São Paulo, a região do Grande ABC e cidades da Região Metropolitana conforme disponibilidade de agenda."
   },
   {
     question: "Qual é a garantia oferecida para os serviços prestados?",

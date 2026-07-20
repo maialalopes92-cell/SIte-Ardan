@@ -28,15 +28,6 @@ export interface ProcessStep {
   iconName: string;
 }
 
-export interface Testimonial {
-  id: string;
-  name: string;
-  role: string;
-  content: string;
-  rating: number;
-  avatarUrl?: string;
-}
-
 export interface BudgetRequest {
   serviceType: string;
   estimatedArea: string;

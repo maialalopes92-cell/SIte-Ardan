@@ -110,7 +110,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                   onClick={() => onNavigate("portfolio")}
                   className="hover:text-brand-primary transition-colors text-left"
                 >
-                  Portfólio
+                  Serviços em Destaque
                 </button>
               </li>
               <li>

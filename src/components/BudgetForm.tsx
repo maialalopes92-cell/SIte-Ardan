@@ -262,7 +262,7 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
                       <input
                         id="budget-location-input"
                         type="text"
-                        placeholder="Ex: Vila Mariana, São Paulo"
+                        placeholder="Ex: informe o bairro e a cidade"
                         value={location}
                         onChange={(e) => setLocation(e.target.value)}
                         className="w-full p-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-sm focus:outline-none focus:border-slate-400 transition-colors"

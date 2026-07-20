@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "motion/react";
 import {
   MapPin,
   Maximize2,
-  Calendar,
   X,
   ArrowRight,
   Sparkles,
@@ -19,7 +18,7 @@ export default function Portfolio({ onSelectProjectForBudget }: PortfolioProps) 
   const [activeFilter, setActiveFilter] = useState("Todos");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const categories = ["Todos", "Residencial", "Comercial", "Construção", "Acabamentos"];
+  const categories = ["Todos", "Alvenaria", "Instalações", "Acabamentos", "Drywall", "Ar-condicionado", "Manutenção"];
 
   const filteredProjects = PROJECTS.filter((proj) => {
     if (activeFilter === "Todos") return true;
@@ -32,7 +31,7 @@ export default function Portfolio({ onSelectProjectForBudget }: PortfolioProps) 
 
   const handleQuoteClick = (title: string) => {
     setSelectedProject(null);
-    onSelectProjectForBudget(`Projeto similar a: ${title}`);
+    onSelectProjectForBudget(title);
   };
 
   return (
@@ -42,13 +41,13 @@ export default function Portfolio({ onSelectProjectForBudget }: PortfolioProps) 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-xs font-mono tracking-wider uppercase text-brand-primary font-bold">
-            Portfólio de Obras
+            Frentes de Atendimento
           </span>
           <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900 tracking-tight">
-            Trabalhos Realizados
+            Serviços em Destaque
           </h2>
           <p className="text-slate-600 font-sans">
-            Cada obra é tratada com dedicação absoluta e precisão geométrica. Navegue por alguns dos nossos projetos de construção e reforma entregues.
+            Enquanto o portfólio real é atualizado com obras autorizadas pelos clientes, reunimos aqui as principais frentes de serviço que o Grupo Ardan atende com mão de obra especializada.
           </p>
         </div>
 
@@ -114,7 +113,7 @@ export default function Portfolio({ onSelectProjectForBudget }: PortfolioProps) 
                   <div className="space-y-2">
                     <div className="flex items-center text-slate-400 text-xs font-mono space-x-1">
                       <MapPin className="w-3.5 h-3.5" />
-                      <span>{project.location.split("-")[0].trim()}</span>
+                      <span>{project.location}</span>
                     </div>
                     <h3 className="text-lg font-bold font-display text-slate-900 leading-snug group-hover:text-brand-primary transition-colors">
                       {project.title}
@@ -126,7 +125,7 @@ export default function Portfolio({ onSelectProjectForBudget }: PortfolioProps) 
 
                   <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-600">
                     <div>
-                      <span className="block text-[10px] font-mono text-slate-400">ÁREA</span>
+                      <span className="block text-[10px] font-mono text-slate-400">ESCOPO</span>
                       <span className="block text-slate-800">{project.area}</span>
                     </div>
                     <div>
@@ -138,7 +137,7 @@ export default function Portfolio({ onSelectProjectForBudget }: PortfolioProps) 
                       onClick={() => handleProjectSelect(project)}
                       className="text-brand-primary hover:text-brand-deep inline-flex items-center space-x-1 cursor-pointer"
                     >
-                      <span>Ver Ficha</span>
+                      <span>Ver detalhes</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </button>
                   </div>
@@ -208,15 +207,15 @@ export default function Portfolio({ onSelectProjectForBudget }: PortfolioProps) 
                   <div className="grid grid-cols-3 gap-4 py-4 border-y border-slate-100">
                     <div>
                       <span className="block text-[9px] font-mono text-slate-400 uppercase tracking-widest">
-                        Localização
+                        Atendimento
                       </span>
                       <span className="block text-xs font-semibold text-slate-700 font-sans mt-0.5 truncate">
-                        {selectedProject.location.split("-")[0]}
+                        {selectedProject.location}
                       </span>
                     </div>
                     <div>
                       <span className="block text-[9px] font-mono text-slate-400 uppercase tracking-widest">
-                        Área de Obra
+                        Escopo
                       </span>
                       <span className="block text-xs font-semibold text-slate-700 font-sans mt-0.5">
                         {selectedProject.area}
@@ -224,7 +223,7 @@ export default function Portfolio({ onSelectProjectForBudget }: PortfolioProps) 
                     </div>
                     <div>
                       <span className="block text-[9px] font-mono text-slate-400 uppercase tracking-widest">
-                        Duração
+                        Prazo
                       </span>
                       <span className="block text-xs font-semibold text-slate-700 font-sans mt-0.5">
                         {selectedProject.duration}
@@ -236,7 +235,7 @@ export default function Portfolio({ onSelectProjectForBudget }: PortfolioProps) 
                   <div className="space-y-3">
                     <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold flex items-center space-x-1">
                       <Sparkles className="w-3.5 h-3.5 text-brand-primary" />
-                      <span>Destaques da Execução</span>
+                      <span>O que pode incluir</span>
                     </h4>
                     <ul className="space-y-2 text-xs text-slate-600 font-sans">
                       {selectedProject.details.map((detail, idx) => (
@@ -255,7 +254,7 @@ export default function Portfolio({ onSelectProjectForBudget }: PortfolioProps) 
                       onClick={() => handleQuoteClick(selectedProject.title)}
                       className="w-full inline-flex items-center justify-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm px-5 py-3.5 rounded-xl shadow-md transition-colors cursor-pointer"
                     >
-                      <span>Quero Orçamento Similar</span>
+                      <span>Solicitar Orçamento</span>
                       <ArrowRight className="w-4 h-4 text-brand-primary" />
                     </button>
                   </div>

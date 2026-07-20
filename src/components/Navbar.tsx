@@ -28,7 +28,7 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
     { id: "quem-somos", label: "Quem Somos" },
     { id: "servicos", label: "Serviços" },
     { id: "como-trabalhamos", label: "Como Trabalhamos" },
-    { id: "portfolio", label: "Trabalhos Realizados" },
+    { id: "portfolio", label: "Serviços em Destaque" },
     { id: "orcamento", label: "Solicite um Orçamento" },
     { id: "contato", label: "Contato" },
   ];
