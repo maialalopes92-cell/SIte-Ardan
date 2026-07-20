@@ -18,7 +18,7 @@ export default function Portfolio({ onSelectProjectForBudget }: PortfolioProps) 
   const [activeFilter, setActiveFilter] = useState("Todos");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const categories = ["Todos", "Alvenaria", "Instalações", "Acabamentos", "Drywall", "Ar-condicionado", "Manutenção"];
+  const categories = ["Todos", "Alvenaria", "Instalações", "Energia solar", "Acabamentos", "Drywall", "Ar-condicionado", "Manutenção"];
 
   const filteredProjects = PROJECTS.filter((proj) => {
     if (activeFilter === "Todos") return true;

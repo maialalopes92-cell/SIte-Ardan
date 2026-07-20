@@ -8,6 +8,7 @@ import {
   Sparkles,
   Layers,
   Snowflake,
+  Sun,
   Wrench,
   ArrowRight,
   Check,
@@ -34,6 +35,8 @@ export default function Services({ onSelectServiceForBudget }: ServicesProps) {
         return <Briefcase className={className} />;
       case "Zap":
         return <Zap className={className} />;
+      case "Sun":
+        return <Sun className={className} />;
       case "Sparkles":
         return <Sparkles className={className} />;
       case "Layers":
@@ -69,7 +72,7 @@ export default function Services({ onSelectServiceForBudget }: ServicesProps) {
             Nossos Serviços
           </h2>
           <p className="text-slate-600 font-sans">
-            Dominamos todas as etapas da sua obra ou reforma. Reunimos especialistas qualificados sob coordenação profissional para entregar máxima qualidade.
+            Dominamos etapas de obra, reforma e instalações técnicas. Reunimos profissionais qualificados sob coordenação organizada para entregar qualidade do começo ao fim.
           </p>
         </div>
 
@@ -131,7 +134,7 @@ export default function Services({ onSelectServiceForBudget }: ServicesProps) {
               Procurando um serviço sob medida que não encontrou aqui?
             </h3>
             <p className="text-sm sm:text-base text-slate-300 font-sans leading-relaxed">
-              Trabalhamos com mão de obra especializada para demandas específicas de construção, reforma, instalações e acabamentos. Conte com uma equipe prática, organizada e pronta para executar o serviço com qualidade.
+              Trabalhamos com mão de obra especializada para demandas específicas de construção, reforma, instalações, energia solar e acabamentos. Conte com uma equipe prática, organizada e pronta para executar o serviço com qualidade.
             </p>
             <button
               id="services-custom-cta-btn"

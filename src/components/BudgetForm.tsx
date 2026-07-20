@@ -45,6 +45,7 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
     "Reforma Residencial",
     "Reforma Comercial",
     "Instalações",
+    "Instalação de Placas Solares",
     "Instalação de Ar-Condicionado",
     "Manutenção Preventiva & Corretiva",
     "Acabamentos",
@@ -96,11 +97,11 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
     const formattedDesc = description ? `\n- Detalhes: ${description}` : "";
     const formattedFiles =
       uploadedFiles.length > 0
-        ? `\n- Anexos enviados: ${uploadedFiles.length} foto(s)/planta(s)`
+        ? `\n- Anexos enviados: ${uploadedFiles.length} foto(s)/arquivo(s)`
         : "";
     return `Olá Grupo Ardan! Encontrei o site e gostaria de solicitar um orçamento.
 - Serviço desejado: ${serviceType}
-- Área aproximada: ${area} m²
+- Área/tamanho aproximado: ${area} m²
 - Local da obra: ${location || "Não informado"}
 - Nome do cliente: ${name}${formattedDesc}${formattedFiles}
 - Contato: ${phone || "Não informado"} (E-mail: ${email || "Não informado"})`;
@@ -230,7 +231,7 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
                   {/* Range Slider for Metragem */}
                   <div className="space-y-3">
                     <div className="flex justify-between items-center text-sm font-semibold text-slate-800">
-                      <label className="font-display">Área estimada da obra/reforma</label>
+                      <label className="font-display">Área estimada / tamanho aproximado do serviço</label>
                       <span className="text-brand-primary bg-brand-primary/10 px-3 py-1 rounded-full font-mono text-xs">
                         {area} m²
                       </span>
@@ -246,7 +247,7 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
                       className="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-brand-primary"
                     />
                     <div className="flex justify-between text-[10px] text-slate-400 font-mono">
-                      <span>Mín: 10m² (Banheiro/Varanda)</span>
+                      <span>Mín: 10m² ou serviço pontual</span>
                       <span>Méd: 150m²</span>
                       <span>Máx: 500m²+</span>
                     </div>
@@ -325,7 +326,7 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
                     <textarea
                       id="budget-desc-textarea"
                       rows={3}
-                      placeholder="Ex: Preciso nivelar o piso da varanda para integrar com a sala, assentar porcelanato de 90x90cm e refazer a elétrica com novas tomadas."
+                      placeholder="Ex: informe o que precisa executar, o tipo de imóvel, medidas aproximadas e detalhes importantes do local."
                       value={description}
                       onChange={(e) => setDescription(e.target.value)}
                       className="w-full p-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-sm focus:outline-none focus:border-slate-400 transition-colors resize-none"
@@ -335,7 +336,7 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
                   {/* Drag and drop File Upload */}
                   <div className="space-y-2">
                     <label className="block text-xs font-semibold text-slate-700">
-                      Anexe plantas, projetos ou fotos do local (Opcional)
+                      Anexe fotos ou arquivos do local (Opcional)
                     </label>
                     <div
                       onDragOver={handleDragOver}
@@ -461,10 +462,10 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
                   <div className="p-4 bg-white/80 rounded-2xl border border-emerald-100 max-w-sm mx-auto text-left space-y-2 text-xs text-slate-500 font-sans">
                     <span className="block font-bold text-slate-700">Resumo da Solicitação:</span>
                     <span className="block">• Serviço: {serviceType}</span>
-                    <span className="block">• Área: {area}m²</span>
+                    <span className="block">• Área/Tamanho: {area}m²</span>
                     <span className="block">• Localização: {location || "Não especificado"}</span>
                     {uploadedFiles.length > 0 && (
-                      <span className="block">• Plantas anexadas: {uploadedFiles.length}</span>
+                      <span className="block">• Arquivos anexados: {uploadedFiles.length}</span>
                     )}
                   </div>
                   <div className="pt-4 flex flex-col sm:flex-row justify-center gap-3">
@@ -514,7 +515,7 @@ export default function BudgetForm({ prefilledService }: BudgetFormProps) {
 
                   <div>
                     <span className="block text-[10px] font-mono text-slate-400 uppercase tracking-widest">
-                      Área da Obra
+                      Área / Tamanho
                     </span>
                     <span className="block text-lg font-display font-semibold text-brand-primary mt-0.5">
                       {area} m²

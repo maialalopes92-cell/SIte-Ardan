@@ -36,7 +36,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               />
             </div>
             <p className="text-xs sm:text-sm text-slate-400 font-sans leading-relaxed">
-              Mão de obra especializada em construção, reformas, instalações e acabamentos. Cuidamos da execução com transparência, capricho e respeito aos prazos combinados.
+              Mão de obra especializada em construção, reformas, instalações, energia solar e acabamentos. Cuidamos da execução com transparência, capricho e respeito aos prazos combinados.
             </p>
             <div className="flex space-x-3 pt-2">
               <a

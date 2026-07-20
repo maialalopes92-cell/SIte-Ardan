@@ -3,7 +3,7 @@ import { Service, Project, ProcessStep } from "./types";
 export const COMPANY_INFO = {
   name: "Grupo Ardan",
   tagline: "Construção e reforma com soluções completas para sua obra",
-  subTagline: "Executamos serviços de construção civil, reformas, instalações e acabamentos residenciais e comerciais, reunindo diferentes especialidades para entregar mais praticidade, organização e qualidade ao cliente.",
+  subTagline: "Executamos serviços de construção civil, reformas, instalações, energia solar e acabamentos residenciais e comerciais, reunindo diferentes especialidades para entregar mais praticidade, organização e qualidade ao cliente.",
   slogan: "Da alvenaria ao acabamento, cuidamos de cada etapa da sua obra.",
   whatsappLink: "https://wa.me/5511945591563?text=Olá!%20Encontrei%20o%20Grupo%20Ardan%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
   phoneFormatted: "(11) 94559-1563",
@@ -19,6 +19,22 @@ export const COMPANY_INFO = {
     { value: "100%", label: "Prazos Cumpridos" },
     { value: "15+", label: "Especialistas na Equipe" }
   ]
+};
+
+const solarService: Service = {
+  id: "placas-solares",
+  iconName: "Sun",
+  title: "Instalação de Placas Solares",
+  shortDescription: "Mão de obra para instalação de sistemas fotovoltaicos com fixação segura, infraestrutura elétrica e acabamento organizado.",
+  longDescription: "Executamos a instalação de placas solares com mão de obra especializada para residências, comércios e empresas. Cuidamos da fixação dos módulos, passagem de cabos, infraestrutura elétrica e organização dos pontos de instalação, sempre conforme as condições do local e o sistema contratado.",
+  features: [
+    "Fixação de módulos fotovoltaicos em telhados e estruturas adequadas",
+    "Passagem e organização de cabos solares",
+    "Infraestrutura elétrica para conexão do sistema",
+    "Apoio na instalação de inversores e proteções conforme necessidade do local",
+    "Execução limpa, segura e alinhada ao acabamento do imóvel"
+  ],
+  imageUrl: "/images/ardan-placas-solares.png"
 };
 
 export const SERVICES: Service[] = [
@@ -82,6 +98,7 @@ export const SERVICES: Service[] = [
     ],
     imageUrl: "/images/ardan-eletrica-quadro.png"
   },
+  solarService,
   {
     id: "ar-condicionado",
     iconName: "Snowflake",
@@ -175,6 +192,22 @@ export const PROJECTS: Project[] = [
       "Passagem de tubulações, fiação e infraestrutura",
       "Correções pontuais em vazamentos, tomadas e iluminação",
       "Execução organizada para reduzir retrabalho na reforma"
+    ]
+  },
+  {
+    id: "frente-placas-solares",
+    title: "Instalação de Placas Solares",
+    category: "Energia solar",
+    description: "Mão de obra para instalação de módulos fotovoltaicos, infraestrutura elétrica e acabamento organizado em residências e empresas.",
+    imageUrl: "/images/ardan-placas-solares.png",
+    area: "Por sistema",
+    duration: "Conforme escopo",
+    location: "Atendimento sob orçamento",
+    details: [
+      "Fixação de módulos solares em estrutura adequada",
+      "Passagem e organização dos cabos do sistema",
+      "Apoio na instalação de inversores e proteções",
+      "Execução segura, limpa e alinhada ao local"
     ]
   },
   {
@@ -296,6 +329,6 @@ export const FAQS = [
   },
   {
     question: "Qual é a garantia oferecida para os serviços prestados?",
-    answer: "Oferecemos garantia sobre os serviços executados conforme o tipo de trabalho contratado, incluindo instalações, hidráulica, acabamentos e impermeabilização realizada por nossa equipe. Tudo é alinhado em orçamento antes do início."
+    answer: "Oferecemos garantia sobre os serviços executados conforme o tipo de trabalho contratado, incluindo instalações, energia solar, hidráulica, acabamentos e impermeabilização realizada por nossa equipe. Tudo é alinhado em orçamento antes do início."
   }
 ];
