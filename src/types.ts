@@ -28,6 +28,26 @@ export interface ProcessStep {
   iconName: string;
 }
 
+export interface ServicePage {
+  serviceId: string;
+  path: string;
+  title: string;
+  metaDescription: string;
+  h1: string;
+  shortName: string;
+  intro: string;
+  imageUrl: string;
+  formService: string;
+  keywords: string[];
+  highlights: string[];
+  inclusions: string[];
+  localText: string;
+  faqs: Array<{
+    question: string;
+    answer: string;
+  }>;
+}
+
 export interface BudgetRequest {
   serviceType: string;
   estimatedArea: string;

@@ -14,7 +14,7 @@ import {
   Check,
   X,
 } from "lucide-react";
-import { SERVICES } from "../data";
+import { SERVICES, SERVICE_PAGES } from "../data";
 import { Service } from "../types";
 
 interface ServicesProps {
@@ -78,47 +78,63 @@ export default function Services({ onSelectServiceForBudget }: ServicesProps) {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {SERVICES.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100 flex flex-col justify-between group"
-            >
-              <div>
-                {/* Image placeholder wrapper */}
-                <div className="relative h-40 w-full rounded-xl overflow-hidden mb-6 bg-slate-100">
-                  <img
-                    src={service.imageUrl}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md p-3 rounded-xl text-brand-primary shadow-md">
-                    {getIcon(service.iconName)}
+          {SERVICES.map((service, index) => {
+            const servicePages = SERVICE_PAGES.filter((page) => page.serviceId === service.id);
+
+            return (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100 flex flex-col justify-between group"
+              >
+                <div>
+                  {/* Image placeholder wrapper */}
+                  <div className="relative h-40 w-full rounded-xl overflow-hidden mb-6 bg-slate-100">
+                    <img
+                      src={service.imageUrl}
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md p-3 rounded-xl text-brand-primary shadow-md">
+                      {getIcon(service.iconName)}
+                    </div>
                   </div>
+
+                  <h3 className="text-xl font-bold font-display text-slate-900 mb-3 group-hover:text-brand-primary transition-colors">
+                    {service.title}
+                  </h3>
+                  
+                  <p className="text-sm text-slate-500 font-sans leading-relaxed mb-6">
+                    {service.shortDescription}
+                  </p>
                 </div>
 
-                <h3 className="text-xl font-bold font-display text-slate-900 mb-3 group-hover:text-brand-primary transition-colors">
-                  {service.title}
-                </h3>
-                
-                <p className="text-sm text-slate-500 font-sans leading-relaxed mb-6">
-                  {service.shortDescription}
-                </p>
-              </div>
+                <div className="flex flex-wrap items-center gap-3">
+                  <button
+                    id={`services-more-btn-${service.id}`}
+                    onClick={() => handleServiceSelect(service)}
+                    className="inline-flex items-center space-x-2 text-sm font-semibold text-brand-primary hover:text-brand-deep transition-colors group/btn cursor-pointer"
+                  >
+                    <span>Saiba mais detalhes</span>
+                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </button>
 
-              <button
-                id={`services-more-btn-${service.id}`}
-                onClick={() => handleServiceSelect(service)}
-                className="inline-flex items-center space-x-2 text-sm font-semibold text-brand-primary hover:text-brand-deep transition-colors group/btn cursor-pointer"
-              >
-                <span>Saiba mais detalhes</span>
-                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-              </button>
-            </motion.div>
-          ))}
+                  {servicePages.slice(0, service.id === "instalacoes" ? 2 : 1).map((page) => (
+                    <a
+                      key={page.path}
+                      href={page.path}
+                      className="inline-flex items-center rounded-full border border-brand-primary/20 px-3 py-1.5 text-xs font-bold text-brand-dark transition hover:border-brand-primary hover:text-brand-primary"
+                    >
+                      {service.id === "instalacoes" ? page.shortName : "Ver página"}
+                    </a>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Banner CTA */}

@@ -1,4 +1,4 @@
-import { Service, Project, ProcessStep } from "./types";
+import { Service, Project, ProcessStep, ServicePage } from "./types";
 
 export const COMPANY_INFO = {
   name: "Grupo Ardan",
@@ -158,6 +158,199 @@ export const SERVICES: Service[] = [
       "Tratamento profissional de juntas (sem trincas)"
     ],
     imageUrl: "/images/ardan-drywall-instalacao.png"
+  }
+];
+
+export const SERVICE_PAGES: ServicePage[] = [
+  {
+    serviceId: "alvenaria",
+    path: "/alvenaria",
+    title: "Alvenaria e Construção em São Paulo e ABC | Grupo Ardan",
+    metaDescription: "Mão de obra para alvenaria, construção de paredes, muros, reboco, bases e etapas iniciais de obra em São Paulo, Grande ABC e Região Metropolitana.",
+    h1: "Alvenaria e construção com mão de obra especializada",
+    shortName: "alvenaria",
+    intro: "Executamos serviços de alvenaria para obras, reformas e adequações, cuidando de paredes, muros, rebocos, bases e preparo do ambiente para as próximas etapas.",
+    imageUrl: "/images/ardan-obra-estrutura.png",
+    formService: "Alvenaria",
+    keywords: ["alvenaria em São Paulo", "pedreiro no ABC", "construção de parede", "reboco e emboço", "mão de obra construção civil"],
+    highlights: ["Atendimento em São Paulo e Grande ABC", "Execução organizada", "Serviço alinhado ao escopo combinado"],
+    inclusions: ["Levantamento de paredes e muros", "Reboco, emboço e regularização", "Bases, pequenas fundações e ajustes de obra", "Preparo para instalações e acabamento"],
+    localText: "Atendemos obras residenciais e comerciais em São Paulo, Grande ABC e Região Metropolitana, conforme agenda e escopo do serviço.",
+    faqs: [
+      { question: "O Grupo Ardan faz pequenos serviços de alvenaria?", answer: "Sim. Atendemos desde ajustes pontuais até etapas maiores dentro de reformas e obras." },
+      { question: "Vocês fazem reboco e regularização de paredes?", answer: "Sim. Executamos reboco, emboço, regularização e preparo para acabamento." }
+    ]
+  },
+  {
+    serviceId: "residencial",
+    path: "/reformas-residenciais",
+    title: "Reforma Residencial em São Paulo e ABC | Grupo Ardan",
+    metaDescription: "Reforma residencial para casas e apartamentos com mão de obra especializada em alvenaria, elétrica, hidráulica, gesso, pintura e acabamentos.",
+    h1: "Reforma residencial para casas e apartamentos",
+    shortName: "reforma residencial",
+    intro: "Ajudamos a transformar ambientes residenciais com organização, cuidado com o imóvel e execução por etapas, da preparação ao acabamento.",
+    imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+    formService: "Reforma Residencial",
+    keywords: ["reforma residencial São Paulo", "reforma de apartamento", "reforma de casa", "mão de obra para reforma"],
+    highlights: ["Proteção do ambiente", "Equipe sob coordenação", "Comunicação durante a obra"],
+    inclusions: ["Reformas de cozinhas, banheiros e áreas internas", "Adequação de pontos elétricos e hidráulicos", "Gesso, pintura e revestimentos", "Acabamentos finais e limpeza do local"],
+    localText: "Atendimento para reformas residenciais em São Paulo, Grande ABC e cidades próximas da Região Metropolitana.",
+    faqs: [
+      { question: "Vocês fazem reforma parcial?", answer: "Sim. Podemos atender um único ambiente, como banheiro, cozinha, varanda ou área de serviço." },
+      { question: "O orçamento pode separar mão de obra e materiais?", answer: "Sim. O escopo pode ser organizado de forma transparente conforme a necessidade do cliente." }
+    ]
+  },
+  {
+    serviceId: "comercial",
+    path: "/reformas-comerciais",
+    title: "Reforma Comercial em São Paulo e ABC | Grupo Ardan",
+    metaDescription: "Mão de obra para reforma comercial, escritórios, lojas e salas empresariais com elétrica, hidráulica, drywall, pintura e acabamentos.",
+    h1: "Reforma comercial para lojas, salas e escritórios",
+    shortName: "reforma comercial",
+    intro: "Executamos reformas comerciais com foco em organização, prazo combinado e acabamento adequado para o funcionamento do seu negócio.",
+    imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+    formService: "Reforma Comercial",
+    keywords: ["reforma comercial São Paulo", "reforma de escritório", "reforma de loja", "mão de obra comercial"],
+    highlights: ["Execução por etapas", "Adequação do ambiente", "Atendimento conforme agenda"],
+    inclusions: ["Adequação de layout", "Instalações elétricas e hidráulicas", "Drywall, pintura e acabamentos", "Ajustes para salas, lojas e escritórios"],
+    localText: "Atendimento para empresas, comércios e escritórios em São Paulo, ABC e Região Metropolitana.",
+    faqs: [
+      { question: "Vocês atendem lojas e escritórios?", answer: "Sim. Atendemos ambientes comerciais conforme escopo, prazo e disponibilidade de agenda." },
+      { question: "É possível fazer reforma fora do horário comercial?", answer: "Podemos avaliar a necessidade e combinar a melhor programação para reduzir impacto no funcionamento." }
+    ]
+  },
+  {
+    serviceId: "instalacoes",
+    path: "/eletricista",
+    title: "Eletricista em São Paulo e ABC | Grupo Ardan",
+    metaDescription: "Serviços de eletricista para reformas, novos pontos, tomadas, iluminação, quadros, manutenção elétrica e infraestrutura em São Paulo e ABC.",
+    h1: "Eletricista para reformas, instalações e manutenção",
+    shortName: "serviço elétrico",
+    intro: "Realizamos instalações elétricas, novos pontos, ajustes, iluminação, quadros e manutenção dentro de reformas residenciais e comerciais.",
+    imageUrl: "/images/ardan-eletrica-quadro.png",
+    formService: "Instalações",
+    keywords: ["eletricista São Paulo", "eletricista ABC", "instalação elétrica", "manutenção elétrica", "quadro de disjuntores"],
+    highlights: ["Novos pontos elétricos", "Iluminação e tomadas", "Organização e segurança na execução"],
+    inclusions: ["Instalação e troca de tomadas e interruptores", "Passagem de fiação e conduítes", "Montagem e adequação de quadros", "Infraestrutura elétrica para equipamentos"],
+    localText: "Atendemos serviços elétricos em São Paulo, Grande ABC e Região Metropolitana, principalmente em reformas, adequações e manutenções.",
+    faqs: [
+      { question: "Vocês fazem instalação de novos pontos?", answer: "Sim. Fazemos novos pontos de tomada, iluminação, interruptores e infraestrutura conforme a necessidade do ambiente." },
+      { question: "Atendem manutenção elétrica corretiva?", answer: "Sim. Avaliamos falhas pontuais e executamos correções combinadas no orçamento." }
+    ]
+  },
+  {
+    serviceId: "instalacoes",
+    path: "/encanador",
+    title: "Encanador em São Paulo e ABC | Grupo Ardan",
+    metaDescription: "Serviços hidráulicos e encanador para reformas, vazamentos, novos pontos de água, esgoto, registros e tubulações em São Paulo e ABC.",
+    h1: "Encanador para reformas e instalações hidráulicas",
+    shortName: "serviço hidráulico",
+    intro: "Executamos instalações hidráulicas em reformas, correções de vazamentos, novos pontos de água, esgoto, registros e adequações em ambientes residenciais e comerciais.",
+    imageUrl: "/images/ardan-obra-estrutura.png",
+    formService: "Instalações",
+    keywords: ["encanador São Paulo", "encanador ABC", "instalação hidráulica", "vazamento", "ponto de água"],
+    highlights: ["Novos pontos hidráulicos", "Correção de vazamentos", "Execução alinhada ao acabamento"],
+    inclusions: ["Pontos de água fria e quente", "Tubulações, registros e conexões", "Correção de vazamentos e infiltrações pontuais", "Infraestrutura hidráulica para cozinhas, banheiros e áreas de serviço"],
+    localText: "Atendimento hidráulico em São Paulo, Grande ABC e Região Metropolitana para reformas, adequações e manutenções.",
+    faqs: [
+      { question: "Vocês fazem novos pontos hidráulicos?", answer: "Sim. Executamos pontos de água, esgoto e ajustes de tubulação conforme o local." },
+      { question: "Atendem vazamentos?", answer: "Sim. Podemos avaliar e corrigir vazamentos pontuais dentro do escopo combinado." }
+    ]
+  },
+  {
+    serviceId: "placas-solares",
+    path: "/instalacao-placas-solares",
+    title: "Instalação de Placas Solares em São Paulo e ABC | Grupo Ardan",
+    metaDescription: "Mão de obra para instalação de placas solares, fixação de módulos, passagem de cabos e infraestrutura elétrica para sistemas fotovoltaicos.",
+    h1: "Instalação de placas solares com execução organizada",
+    shortName: "placas solares",
+    intro: "Executamos a mão de obra para instalação de placas solares, cuidando da fixação dos módulos, passagem de cabos, infraestrutura elétrica e acabamento do local.",
+    imageUrl: "/images/ardan-placas-solares.png",
+    formService: "Instalação de Placas Solares",
+    keywords: ["instalação de placas solares", "energia solar São Paulo", "instalador solar ABC", "mão de obra fotovoltaica"],
+    highlights: ["Fixação segura dos módulos", "Organização de cabos", "Acabamento limpo"],
+    inclusions: ["Fixação de módulos fotovoltaicos", "Passagem e organização dos cabos", "Apoio na instalação de inversores", "Infraestrutura elétrica conforme sistema contratado"],
+    localText: "Atendemos instalações solares em residências, comércios e empresas em São Paulo, Grande ABC e Região Metropolitana.",
+    faqs: [
+      { question: "Vocês vendem o kit solar?", answer: "O foco do Grupo Ardan é mão de obra para instalação e infraestrutura. O escopo é combinado conforme o sistema contratado." },
+      { question: "Vocês instalam em telhado residencial?", answer: "Sim. Avaliamos o local e executamos a instalação conforme as condições de acesso, segurança e estrutura." }
+    ]
+  },
+  {
+    serviceId: "ar-condicionado",
+    path: "/instalacao-ar-condicionado",
+    title: "Instalação de Ar-Condicionado em São Paulo e ABC | Grupo Ardan",
+    metaDescription: "Instalação de ar-condicionado split, condensadora, evaporadora, dreno, tubulação frigorígena e acabamento em São Paulo e ABC.",
+    h1: "Instalação de ar-condicionado split",
+    shortName: "instalação de ar-condicionado",
+    intro: "Instalamos aparelhos de ar-condicionado split com cuidado na fixação, tubulação, dreno, ponto elétrico e acabamento do ambiente.",
+    imageUrl: "/images/ardan-split-instalacao.png",
+    formService: "Instalação de Ar-Condicionado",
+    keywords: ["instalação de ar condicionado", "instalador de ar condicionado São Paulo", "instalação split ABC", "condensadora e evaporadora"],
+    highlights: ["Split e inverter", "Dreno e tubulação", "Teste de funcionamento"],
+    inclusions: ["Instalação de evaporadora e condensadora", "Tubulação frigorígena e isolamento", "Dreno e suporte", "Ponto elétrico conforme necessidade"],
+    localText: "Atendemos instalação de ar-condicionado em São Paulo, Grande ABC e Região Metropolitana.",
+    faqs: [
+      { question: "Vocês instalam ar-condicionado split?", answer: "Sim. Instalamos aparelhos split, inverter e configurações compatíveis com o ambiente." },
+      { question: "Vocês fazem infraestrutura para ar-condicionado?", answer: "Sim. Executamos tubulação, dreno, suporte e ponto elétrico conforme necessidade do local." }
+    ]
+  },
+  {
+    serviceId: "manutencao-preventiva-corretiva",
+    path: "/manutencao-ar-condicionado",
+    title: "Manutenção de Ar-Condicionado em São Paulo e ABC | Grupo Ardan",
+    metaDescription: "Manutenção preventiva e corretiva de ar-condicionado, condensadora, evaporadora, limpeza, ajustes e correção de falhas em São Paulo e ABC.",
+    h1: "Manutenção preventiva e corretiva de ar-condicionado",
+    shortName: "manutenção de ar-condicionado",
+    intro: "Atendemos manutenção de ar-condicionado para preservar desempenho, corrigir falhas e evitar paradas inesperadas em residências e empresas.",
+    imageUrl: "/images/ardan-condensadora-manutencao.png",
+    formService: "Manutenção Preventiva & Corretiva",
+    keywords: ["manutenção de ar condicionado", "limpeza de ar condicionado", "manutenção preventiva ar condicionado", "condensadora"],
+    highlights: ["Preventiva e corretiva", "Condensadora e evaporadora", "Atendimento programado"],
+    inclusions: ["Limpeza e revisão conforme necessidade", "Correção de falhas pontuais", "Verificação de dreno e funcionamento", "Atendimento para residências e empresas"],
+    localText: "Atendimento para manutenção de ar-condicionado em São Paulo, Grande ABC e Região Metropolitana.",
+    faqs: [
+      { question: "Vocês fazem manutenção preventiva?", answer: "Sim. Atendemos manutenção preventiva para reduzir falhas e preservar o funcionamento do equipamento." },
+      { question: "Vocês corrigem falhas em condensadora?", answer: "Sim. Avaliamos o problema e executamos a correção possível conforme orçamento aprovado." }
+    ]
+  },
+  {
+    serviceId: "acabamentos",
+    path: "/acabamentos",
+    title: "Acabamentos, Pisos e Revestimentos em São Paulo e ABC | Grupo Ardan",
+    metaDescription: "Assentamento de pisos, porcelanatos, revestimentos, pintura e acabamentos para reformas residenciais e comerciais em São Paulo e ABC.",
+    h1: "Acabamentos, pisos e revestimentos",
+    shortName: "acabamentos",
+    intro: "Executamos acabamentos com cuidado no preparo da base, nivelamento, paginação, cortes, rejuntes, pintura e finalização visual do ambiente.",
+    imageUrl: "/images/ardan-assentamento-piso.png",
+    formService: "Acabamentos",
+    keywords: ["assentamento de piso", "porcelanato São Paulo", "revestimento ABC", "pintura e acabamento"],
+    highlights: ["Pisos e porcelanatos", "Pintura e arremates", "Cuidado com acabamento"],
+    inclusions: ["Assentamento de pisos e revestimentos", "Cortes, rejuntes e arremates", "Pintura e preparo de superfícies", "Rodapés e finalizações"],
+    localText: "Atendemos acabamentos residenciais e comerciais em São Paulo, Grande ABC e Região Metropolitana.",
+    faqs: [
+      { question: "Vocês assentam porcelanato?", answer: "Sim. Trabalhamos com pisos, porcelanatos, revestimentos e arremates." },
+      { question: "Também fazem pintura?", answer: "Sim. A pintura pode entrar no escopo de acabamento conforme a necessidade da reforma." }
+    ]
+  },
+  {
+    serviceId: "gesso",
+    path: "/gesso-drywall",
+    title: "Gesso e Drywall em São Paulo e ABC | Grupo Ardan",
+    metaDescription: "Serviços de gesso e drywall, forro, sancas, divisórias, cortineiros, rasgos de luz e preparo para pintura em São Paulo e ABC.",
+    h1: "Gesso e drywall para reformas e acabamentos",
+    shortName: "gesso e drywall",
+    intro: "Executamos forros, sancas, divisórias, rasgos de luz, cortineiros e fechamentos em drywall com acabamento pronto para pintura.",
+    imageUrl: "/images/ardan-drywall-instalacao.png",
+    formService: "Gesso & Drywall",
+    keywords: ["gesso São Paulo", "drywall ABC", "forro de gesso", "sanca de gesso", "divisória drywall"],
+    highlights: ["Forros e sancas", "Divisórias em drywall", "Preparo para pintura"],
+    inclusions: ["Forro de gesso e drywall", "Sancas, cortineiros e rasgos de luz", "Divisórias e fechamentos", "Tratamento de juntas"],
+    localText: "Atendimento para gesso e drywall em São Paulo, Grande ABC e Região Metropolitana.",
+    faqs: [
+      { question: "Vocês fazem forro de drywall?", answer: "Sim. Executamos forros, divisórias e fechamentos em drywall." },
+      { question: "O serviço já fica preparado para pintura?", answer: "Sim. Fazemos tratamento de juntas e preparo conforme acabamento combinado." }
+    ]
   }
 ];
 

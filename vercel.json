@@ -2,5 +2,17 @@
   "framework": "vite",
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist",
-  "installCommand": "pnpm install"
+  "installCommand": "pnpm install",
+  "rewrites": [
+    { "source": "/alvenaria", "destination": "/index.html" },
+    { "source": "/reformas-residenciais", "destination": "/index.html" },
+    { "source": "/reformas-comerciais", "destination": "/index.html" },
+    { "source": "/eletricista", "destination": "/index.html" },
+    { "source": "/encanador", "destination": "/index.html" },
+    { "source": "/instalacao-placas-solares", "destination": "/index.html" },
+    { "source": "/instalacao-ar-condicionado", "destination": "/index.html" },
+    { "source": "/manutencao-ar-condicionado", "destination": "/index.html" },
+    { "source": "/acabamentos", "destination": "/index.html" },
+    { "source": "/gesso-drywall", "destination": "/index.html" }
+  ]
 }

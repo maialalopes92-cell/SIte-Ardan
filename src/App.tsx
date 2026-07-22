@@ -9,8 +9,12 @@ import BudgetForm from "./components/BudgetForm";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
+import ServicePage from "./components/ServicePage";
+import { SERVICE_PAGES } from "./data";
 
 export default function App() {
+  const normalizedPath = window.location.pathname.replace(/\/+$/, "") || "/";
+  const currentServicePage = SERVICE_PAGES.find((page) => page.path === normalizedPath);
   const [activeSection, setActiveSection] = useState("inicio");
   const [prefilledService, setPrefilledService] = useState("Reforma Residencial");
 
@@ -32,6 +36,15 @@ export default function App() {
       handleNavigate("orcamento");
     }, 100);
   };
+
+  useEffect(() => {
+    if (currentServicePage) return;
+
+    const sectionId = window.location.hash.replace("#", "");
+    if (sectionId) {
+      window.setTimeout(() => handleNavigate(sectionId), 120);
+    }
+  }, [currentServicePage]);
 
   // Scroll spy to highlight navbar items dynamically
   useEffect(() => {
@@ -64,6 +77,10 @@ export default function App() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  if (currentServicePage) {
+    return <ServicePage page={currentServicePage} />;
+  }
 
   return (
     <div className="relative min-h-screen bg-slate-50 selection:bg-brand-primary selection:text-white">
